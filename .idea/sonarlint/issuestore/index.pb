@@ -12,12 +12,8 @@ Esrc/main/java/br/com/nielsonferreira/repository/PersonRepository.java,c\7\c7ee
 Msrc/main/java/br/com/nielsonferreira/exception/ResourceNotFoundException.java,3\6\36e3ea6bec815185bf41297cd11414fd191c0cfa
 k
 ;src/main/java/br/com/nielsonferreira/data/model/Person.java,7\a\7a786a7a62503bfb35130eb10a805d64fabff129
-u
-Esrc/main/java/br/com/nielsonferreira/controller/PersonController.java,e\b\ebb623dcaab43ec86901006846a073976e1a90fa
 q
 Asrc/main/java/br/com/nielsonferreira/services/PersonServices.java,2\8\282b982827fe2d8ea450e34d0a9a279e242def0d
-r
-Bsrc/main/java/br/com/nielsonferreira/converter/DozerConverter.java,9\1\9149248049ba300dbc7e5e99d454523225def1a0
 v
 Fsrc/test/java/br/com/nielsonferreira/converter/DozerConverterTest.java,e\0\e04b54f7d75e33eade5344341084af0c5b01e473
 t
