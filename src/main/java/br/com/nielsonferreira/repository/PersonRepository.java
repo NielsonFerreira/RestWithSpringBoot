@@ -1,6 +1,6 @@
 package br.com.nielsonferreira.repository;
 
-import br.com.nielsonferreira.model.Person;
+import br.com.nielsonferreira.data.model.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
