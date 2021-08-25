@@ -2,6 +2,8 @@ package br.com.nielsonferreira.controller;
 
 import br.com.nielsonferreira.data.vo.PersonVO;
 import br.com.nielsonferreira.services.PersonServices;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +13,8 @@ import java.util.List;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
+//@Api(value = "Person Endpoint", tags = {"Person Endpoint"})
+@Api(tags = "PersonEndpoint")
 @RestController
 @RequestMapping("/person")
 public class PersonController {
@@ -18,6 +22,7 @@ public class PersonController {
     @Autowired
     private PersonServices services;
 
+    @ApiOperation(value = "Find all people")
     @GetMapping(produces = {"application/json", "application/xml", "application/x-yaml"})
     public List<PersonVO> findAll(){
         List<PersonVO> persons = services.findAll();
@@ -29,6 +34,7 @@ public class PersonController {
         return persons;
     }
 
+    @ApiOperation(value = "Find a specific person by your ID")
     @GetMapping(value = "/{id}", produces = {"application/json", "application/xml", "application/x-yaml"})
     public PersonVO findById(@PathVariable("id") Long id){
         PersonVO personVO = services.findById(id);
@@ -36,6 +42,7 @@ public class PersonController {
         return personVO;
     }
 
+    @ApiOperation(value = "Create a new person")
     @PostMapping(produces = {"application/json", "application/xml", "application/x-yaml"},
             consumes = {"application/json", "application/xml", "application/x-yaml"})
     public PersonVO create(@RequestBody PersonVO person){
@@ -44,6 +51,7 @@ public class PersonController {
         return personVO;
     }
 
+    @ApiOperation(value = "Update a specific person")
     @PutMapping(produces = {"application/json", "application/xml", "application/x-yaml"},
             consumes = {"application/json", "application/xml", "application/x-yaml"})
     public PersonVO update(@RequestBody PersonVO person){
@@ -52,6 +60,7 @@ public class PersonController {
         return personVO;
     }
 
+    @ApiOperation(value = "Delete a specific person by your ID")
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") Long id){
         services.delete(id);
