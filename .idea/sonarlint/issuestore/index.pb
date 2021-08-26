@@ -20,3 +20,17 @@ v
 Fsrc/test/java/br/com/nielsonferreira/converter/DozerConverterTest.java,e\0\e04b54f7d75e33eade5344341084af0c5b01e473
 ’
 bsrc/main/java/br/com/nielsonferreira/serialization/converter/YamlJackson2HttpMessageConverter.java,e\0\e04c7fee638cbd4c79de6ece2e45373767cdbd9f
+a
+1src/main/java/br/com/nielsonferreira/Startup.java,8\7\874bdecccfba5128d4d7c2c071f673ab8591cb7f
+j
+:src/main/java/br/com/nielsonferreira/data/vo/PersonVO.java,1\1\113e07efd33c99a5522afe47faf74b2ddc538d6a
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+s
+Csrc/main/java/br/com/nielsonferreira/repository/BookRepository.java,6\5\65a258d6c26f0609eaa7b10dceb6909e23f37784
+i
+9src/main/java/br/com/nielsonferreira/data/model/Book.java,0\5\056058396f19096732d575f393bc39231f27cd85
+o
+?src/main/java/br/com/nielsonferreira/services/BookServices.java,4\3\4362d2a11f02641d2dd7c9878819fe77bb111282
+h
+8src/main/java/br/com/nielsonferreira/data/vo/BookVO.java,8\4\849fc2da3c265097a40d4c63ba3e81ac0716d85f
