@@ -24,8 +24,6 @@ a
 1src/main/java/br/com/nielsonferreira/Startup.java,8\7\874bdecccfba5128d4d7c2c071f673ab8591cb7f
 j
 :src/main/java/br/com/nielsonferreira/data/vo/PersonVO.java,1\1\113e07efd33c99a5522afe47faf74b2ddc538d6a
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 s
 Csrc/main/java/br/com/nielsonferreira/repository/BookRepository.java,6\5\65a258d6c26f0609eaa7b10dceb6909e23f37784
 i
