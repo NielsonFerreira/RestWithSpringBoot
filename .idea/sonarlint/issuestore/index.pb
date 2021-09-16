@@ -32,3 +32,13 @@ o
 ?src/main/java/br/com/nielsonferreira/services/BookServices.java,4\3\4362d2a11f02641d2dd7c9878819fe77bb111282
 h
 8src/main/java/br/com/nielsonferreira/data/vo/BookVO.java,8\4\849fc2da3c265097a40d4c63ba3e81ac0716d85f
+n
+>src/main/java/br/com/nielsonferreira/config/SwaggerConfig.java,9\4\944a036f1dc98ccad70eeb8de55419e0a47241d2
+u
+Esrc/main/java/br/com/nielsonferreira/controller/PersonController.java,e\b\ebb623dcaab43ec86901006846a073976e1a90fa
+s
+Csrc/main/java/br/com/nielsonferreira/controller/BookController.java,d\b\dba1399d147d406a7f71927c7e38db1048d0ff26
+j
+:src/main/java/br/com/nielsonferreira/config/WebConfig.java,9\8\98bc907c49019ce64afd457d1a5ad85a071fcd07
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
