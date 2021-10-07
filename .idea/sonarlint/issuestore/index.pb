@@ -7,8 +7,6 @@ u
 Esrc/main/java/br/com/nielsonferreira/repository/PersonRepository.java,c\7\c7eec98c858255d07a940c0e08073d2d3a4f70e2
 }
 Msrc/main/java/br/com/nielsonferreira/exception/ResourceNotFoundException.java,3\6\36e3ea6bec815185bf41297cd11414fd191c0cfa
-k
-;src/main/java/br/com/nielsonferreira/data/model/Person.java,7\a\7a786a7a62503bfb35130eb10a805d64fabff129
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
@@ -24,18 +22,12 @@ s
 Csrc/main/java/br/com/nielsonferreira/repository/BookRepository.java,6\5\65a258d6c26f0609eaa7b10dceb6909e23f37784
 i
 9src/main/java/br/com/nielsonferreira/data/model/Book.java,0\5\056058396f19096732d575f393bc39231f27cd85
-o
-?src/main/java/br/com/nielsonferreira/services/BookServices.java,4\3\4362d2a11f02641d2dd7c9878819fe77bb111282
 h
 8src/main/java/br/com/nielsonferreira/data/vo/BookVO.java,8\4\849fc2da3c265097a40d4c63ba3e81ac0716d85f
 n
 >src/main/java/br/com/nielsonferreira/config/SwaggerConfig.java,9\4\944a036f1dc98ccad70eeb8de55419e0a47241d2
-u
-Esrc/main/java/br/com/nielsonferreira/controller/PersonController.java,e\b\ebb623dcaab43ec86901006846a073976e1a90fa
 j
 :src/main/java/br/com/nielsonferreira/config/WebConfig.java,9\8\98bc907c49019ce64afd457d1a5ad85a071fcd07
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 s
 Csrc/main/java/br/com/nielsonferreira/repository/UserRepository.java,9\c\9caf3c43d3e873414659e89347ba7724105d6b69
 o
@@ -48,11 +40,11 @@ Usrc/main/java/br/com/nielsonferreira/exception/InvalidJwtAuthenticationExceptio
 dsrc/main/java/br/com/nielsonferreira/exception/handler/CustomizedResponseEntityExceptionHandler.java,5\5\55b4c2499cbc0c041a1d152446d7fc2740430a97
 q
 Asrc/main/java/br/com/nielsonferreira/services/PersonServices.java,2\8\282b982827fe2d8ea450e34d0a9a279e242def0d
-w
-Gsrc/main/java/br/com/nielsonferreira/security/jwt/JwtTokenProvider.java,8\d\8d650fbb25e07a32bc4b4330820c5777f9269d80
-u
-Esrc/main/java/br/com/nielsonferreira/security/jwt/JwtTokenFilter.java,f\a\fa214cca6c7ad366caa4a4040e06f783d26e7d5c
+o
+?src/main/java/br/com/nielsonferreira/data/model/Permission.java,d\3\d3ecf6fcfd95dd475ee11a2c44c85569253f90ce
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 t
 Dsrc/main/java/br/com/nielsonferreira/security/jwt/JwtConfigurer.java,5\d\5d2d50a01daf1c5e8ccd4b23908c5e02ebdf3915
-a
-1src/main/java/br/com/nielsonferreira/Startup.java,8\7\874bdecccfba5128d4d7c2c071f673ab8591cb7f
+i
+9src/main/java/br/com/nielsonferreira/data/model/User.java,1\f\1fee7331fc47905d10f30e47519ad19bb6da5b84

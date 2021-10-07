@@ -1,5 +1,6 @@
 package br.com.nielsonferreira.config;
 
+
 import br.com.nielsonferreira.security.jwt.JwtConfigurer;
 import br.com.nielsonferreira.security.jwt.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,20 +26,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     @Override
-    public AuthenticationManager authenticationManager() throws Exception{
+    public AuthenticationManager authenticationManagerBean() throws Exception{
         return super.authenticationManagerBean();
     }
 
     protected void configure(HttpSecurity http) throws Exception{
-        http.httpBasic().disable()
-                .csrf().disable()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
+        http
+        	.httpBasic().disable()
+            .csrf().disable()
+            .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+            .and()
                 .authorizeRequests()
                 .antMatchers("/auth/signin", "/api-docs/**", "swagger-ui.html**").permitAll()
                 .antMatchers("/api/**").authenticated()
                 .antMatchers("/users").denyAll()
-                .and()
-                .apply(new JwtConfigurer(tokenProvider));
+            .and()
+            .apply(new JwtConfigurer(tokenProvider));
     }
 }
