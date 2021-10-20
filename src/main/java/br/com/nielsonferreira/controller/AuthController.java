@@ -3,6 +3,7 @@ package br.com.nielsonferreira.controller;
 import br.com.nielsonferreira.repository.UserRepository;
 import br.com.nielsonferreira.security.AccountCredentialsVO;
 import br.com.nielsonferreira.security.jwt.JwtTokenProvider;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,7 @@ import java.util.Map;
 
 import static org.springframework.http.ResponseEntity.ok;
 
+@Api(tags = "AuthenticationEndpoint")
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
@@ -34,10 +36,11 @@ public class AuthController {
     @Autowired
     UserRepository repository;
 
-    @ApiOperation(value = "Authenticate a user by credentials")
+    @ApiOperation(value = "Authenticates a user and returns a token")
+    @SuppressWarnings("rawtypes")
     @PostMapping(value = "/signin", produces = {"application/json", "application/xml", "application/x-yaml"},
             consumes = {"application/json", "application/xml", "application/x-yaml"})
-    public ResponseEntity create(@RequestBody AccountCredentialsVO data){
+    public ResponseEntity signin(@RequestBody AccountCredentialsVO data){
         try {
             var username = data.getUsername();
             var password = data.getPassword();

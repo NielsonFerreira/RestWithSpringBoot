@@ -60,6 +60,14 @@ public class PersonController {
         return personVO;
     }
 
+    @ApiOperation(value = "Disable a specific person by your ID")
+    @PatchMapping(value = "/{id}", produces = {"application/json", "application/xml", "application/x-yaml"})
+    public PersonVO disablePerson(@PathVariable("id") Long id){
+        PersonVO personVO = services.disablePerson(id);
+        personVO.add(linkTo(methodOn(PersonController.class).findById(id)).withSelfRel());
+        return personVO;
+    }
+
     @ApiOperation(value = "Delete a specific person by your ID")
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") Long id){
