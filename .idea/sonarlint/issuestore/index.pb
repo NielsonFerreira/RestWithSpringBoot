@@ -5,9 +5,6 @@ i
 9src/main/java/br/com/nielsonferreira/math/SimpleMath.java,1\3\13c37a2a409307c6fa5f68b2c46ead646314e31c
 }
 Msrc/main/java/br/com/nielsonferreira/exception/ResourceNotFoundException.java,3\6\36e3ea6bec815185bf41297cd11414fd191c0cfa
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 t
 Dsrc/test/java/br/com/nielsonferreira/converter/mocks/MockPerson.java,0\c\0c1ebb05bd6b2796445ea931bd728308a91f5c01
 v
