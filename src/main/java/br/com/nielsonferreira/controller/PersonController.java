@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,9 +28,12 @@ public class PersonController {
     @ApiOperation(value = "Find all people")
     @GetMapping(produces = {"application/json", "application/xml", "application/x-yaml"})
     public List<PersonVO> findAll(@RequestParam(value = "page", defaultValue = "0") int page,
-                                  @RequestParam(value = "limit", defaultValue = "12") int limit){
+                                  @RequestParam(value = "limit", defaultValue = "12") int limit,
+                                  @RequestParam(value = "direction", defaultValue = "asc") String direction){
 
-        Pageable pageable = PageRequest.of(page, limit);
+        var sortDirection = "desc".equalsIgnoreCase(direction) ? Sort.Direction.DESC : Sort.Direction.ASC;
+
+        Pageable pageable = PageRequest.of(page, limit, Sort.by(sortDirection, "firstName"));
 
         List<PersonVO> persons = services.findAll(pageable);
         persons

@@ -59,3 +59,5 @@ i
 9src/main/java/br/com/nielsonferreira/data/model/Book.java,0\5\056058396f19096732d575f393bc39231f27cd85
 r
 Bsrc/main/java/br/com/nielsonferreira/converter/DozerConverter.java,9\1\9149248049ba300dbc7e5e99d454523225def1a0
+u
+Esrc/main/java/br/com/nielsonferreira/security/jwt/JwtTokenFilter.java,f\a\fa214cca6c7ad366caa4a4040e06f783d26e7d5c
