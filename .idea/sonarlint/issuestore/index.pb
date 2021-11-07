@@ -11,8 +11,6 @@ v
 Fsrc/test/java/br/com/nielsonferreira/converter/DozerConverterTest.java,e\0\e04b54f7d75e33eade5344341084af0c5b01e473
 ’
 bsrc/main/java/br/com/nielsonferreira/serialization/converter/YamlJackson2HttpMessageConverter.java,e\0\e04c7fee638cbd4c79de6ece2e45373767cdbd9f
-s
-Csrc/main/java/br/com/nielsonferreira/repository/BookRepository.java,6\5\65a258d6c26f0609eaa7b10dceb6909e23f37784
 h
 8src/main/java/br/com/nielsonferreira/data/vo/BookVO.java,8\4\849fc2da3c265097a40d4c63ba3e81ac0716d85f
 j
@@ -43,8 +41,6 @@ j
 :src/main/java/br/com/nielsonferreira/data/vo/PersonVO.java,1\1\113e07efd33c99a5522afe47faf74b2ddc538d6a
 s
 Csrc/main/java/br/com/nielsonferreira/repository/UserRepository.java,9\c\9caf3c43d3e873414659e89347ba7724105d6b69
-u
-Esrc/main/java/br/com/nielsonferreira/repository/PersonRepository.java,c\7\c7eec98c858255d07a940c0e08073d2d3a4f70e2
 n
 >src/main/java/br/com/nielsonferreira/config/SwaggerConfig.java,9\4\944a036f1dc98ccad70eeb8de55419e0a47241d2
 7

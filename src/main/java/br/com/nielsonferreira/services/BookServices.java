@@ -22,6 +22,11 @@ public class BookServices {
         return vo;
     }
 
+    public Page<BookVO> findBookByTitle(String title, Pageable pageable){
+        var page = repository.findBookByTitle(title, pageable);
+        return page.map(this::convertToBookVO);
+    }
+
     public Page<BookVO> findAll(Pageable pageable){
         var page = repository.findAll(pageable);
         return page.map(this::convertToBookVO);
