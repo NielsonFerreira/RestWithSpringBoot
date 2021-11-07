@@ -6,11 +6,11 @@ import br.com.nielsonferreira.data.vo.PersonVO;
 import br.com.nielsonferreira.exception.ResourceNotFoundException;
 import br.com.nielsonferreira.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.List;
 
 @Service
 public class PersonServices {
@@ -24,9 +24,14 @@ public class PersonServices {
         return vo;
     }
 
-    public List<PersonVO> findAll(Pageable pageable){
-        var entities = repository.findAll(pageable).getContent();
-        return DozerConverter.parseListObjects(entities, PersonVO.class);
+    public Page<PersonVO> findAll(Pageable pageable){
+        var page = repository.findAll(pageable);
+        return page.map(this::convertToPersonVO);
+    }
+
+    private PersonVO convertToPersonVO(Person entity) {
+        return DozerConverter.parseObject(entity, PersonVO.class);
+
     }
 
     public PersonVO findById(Long id){

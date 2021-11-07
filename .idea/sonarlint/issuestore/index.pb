@@ -36,10 +36,6 @@ Gsrc/main/java/br/com/nielsonferreira/security/jwt/JwtTokenProvider.java,8\d\8d
 o
 ?src/main/java/br/com/nielsonferreira/config/SecurityConfig.java,4\4\44004f41b549ef44cfa9e8f8ae7449a3c7a2e8f6
 s
-Csrc/main/java/br/com/nielsonferreira/controller/BookController.java,d\b\dba1399d147d406a7f71927c7e38db1048d0ff26
-o
-?src/main/java/br/com/nielsonferreira/services/BookServices.java,4\3\4362d2a11f02641d2dd7c9878819fe77bb111282
-s
 Csrc/main/java/br/com/nielsonferreira/controller/AuthController.java,e\5\e52dd29051f7f5aee04184be21471662f0ed36c2
 k
 ;src/main/java/br/com/nielsonferreira/data/model/Person.java,7\a\7a786a7a62503bfb35130eb10a805d64fabff129
@@ -55,9 +51,12 @@ n
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 t
 Dsrc/main/java/br/com/nielsonferreira/security/jwt/JwtConfigurer.java,5\d\5d2d50a01daf1c5e8ccd4b23908c5e02ebdf3915
-i
-9src/main/java/br/com/nielsonferreira/data/model/Book.java,0\5\056058396f19096732d575f393bc39231f27cd85
 r
 Bsrc/main/java/br/com/nielsonferreira/converter/DozerConverter.java,9\1\9149248049ba300dbc7e5e99d454523225def1a0
 u
 Esrc/main/java/br/com/nielsonferreira/security/jwt/JwtTokenFilter.java,f\a\fa214cca6c7ad366caa4a4040e06f783d26e7d5c
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+i
+9src/main/java/br/com/nielsonferreira/data/model/Book.java,0\5\056058396f19096732d575f393bc39231f27cd85
