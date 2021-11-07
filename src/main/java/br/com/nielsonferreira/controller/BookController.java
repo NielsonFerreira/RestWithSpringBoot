@@ -27,12 +27,14 @@ public class BookController {
     @Autowired
     private BookServices services;
 
+    @Autowired
+    PagedResourcesAssembler<BookVO> assembler;
+
     @ApiOperation(value = "Find all books")
     @GetMapping(produces = {"application/json", "application/xml", "application/x-yaml"})
-    public ResponseEntity<PagedResources<BookVO>> findAll(@RequestParam(value = "page", defaultValue = "0") int page,
-                                                         @RequestParam(value = "limit", defaultValue = "12") int limit,
-                                                         @RequestParam(value = "direction", defaultValue = "asc") String direction,
-                                                         PagedResourcesAssembler assembler){
+    public ResponseEntity<?> findAll(@RequestParam(value = "page", defaultValue = "0") int page,
+                                     @RequestParam(value = "limit", defaultValue = "12") int limit,
+                                     @RequestParam(value = "direction", defaultValue = "asc") String direction){
 
         var sortDirection = "desc".equalsIgnoreCase(direction) ? Sort.Direction.DESC : Sort.Direction.ASC;
 
@@ -43,16 +45,18 @@ public class BookController {
                 .forEach(p -> p.add(
                         linkTo(methodOn(BookController.class).findById(p.getKey())).withSelfRel()
                 ));
-        return new ResponseEntity<>(assembler.toResource(books), HttpStatus.OK);
+
+        PagedResources<?> resources = assembler.toResource(books);
+
+        return new ResponseEntity<>(resources, HttpStatus.OK);
     }
 
     @ApiOperation(value = "Find all books")
     @GetMapping(value = ("/findBookByTitle/{title}"), produces = {"application/json", "application/xml", "application/x-yaml"})
-    public ResponseEntity<PagedResources<BookVO>> findBookByTitle(@PathVariable("title") String title,
+    public ResponseEntity<?> findBookByTitle(@PathVariable("title") String title,
                                                                   @RequestParam(value = "page", defaultValue = "0") int page,
                                                                   @RequestParam(value = "limit", defaultValue = "12") int limit,
-                                                                  @RequestParam(value = "direction", defaultValue = "asc") String direction,
-                                                                  PagedResourcesAssembler assembler){
+                                                                  @RequestParam(value = "direction", defaultValue = "asc") String direction){
 
         var sortDirection = "desc".equalsIgnoreCase(direction) ? Sort.Direction.DESC : Sort.Direction.ASC;
 
@@ -63,7 +67,10 @@ public class BookController {
                 .forEach(p -> p.add(
                         linkTo(methodOn(BookController.class).findById(p.getKey())).withSelfRel()
                 ));
-        return new ResponseEntity<>(assembler.toResource(books), HttpStatus.OK);
+
+        PagedResources<?> resources = assembler.toResource(books);
+
+        return new ResponseEntity<>(resources, HttpStatus.OK);
     }
 
     @ApiOperation(value = "Find a specific book by your ID")
