@@ -27,8 +27,6 @@ o
 ?src/main/java/br/com/nielsonferreira/data/model/Permission.java,d\3\d3ecf6fcfd95dd475ee11a2c44c85569253f90ce
 i
 9src/main/java/br/com/nielsonferreira/data/model/User.java,1\f\1fee7331fc47905d10f30e47519ad19bb6da5b84
-a
-1src/main/java/br/com/nielsonferreira/Startup.java,8\7\874bdecccfba5128d4d7c2c071f673ab8591cb7f
 w
 Gsrc/main/java/br/com/nielsonferreira/security/jwt/JwtTokenProvider.java,8\d\8d650fbb25e07a32bc4b4330820c5777f9269d80
 o
@@ -56,3 +54,11 @@ Esrc/main/java/br/com/nielsonferreira/security/jwt/JwtTokenFilter.java,f\a\fa21
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 i
 9src/main/java/br/com/nielsonferreira/data/model/Book.java,0\5\056058396f19096732d575f393bc39231f27cd85
+o
+?src/main/java/br/com/nielsonferreira/services/BookServices.java,4\3\4362d2a11f02641d2dd7c9878819fe77bb111282
+u
+Esrc/main/java/br/com/nielsonferreira/repository/PersonRepository.java,c\7\c7eec98c858255d07a940c0e08073d2d3a4f70e2
+s
+Csrc/main/java/br/com/nielsonferreira/repository/BookRepository.java,6\5\65a258d6c26f0609eaa7b10dceb6909e23f37784
+q
+Asrc/main/java/br/com/nielsonferreira/services/PersonServices.java,2\8\282b982827fe2d8ea450e34d0a9a279e242def0d
