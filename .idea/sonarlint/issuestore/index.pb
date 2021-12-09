@@ -44,14 +44,8 @@ s
 Csrc/main/java/br/com/nielsonferreira/repository/BookRepository.java,6\5\65a258d6c26f0609eaa7b10dceb6909e23f37784
 s
 Csrc/main/java/br/com/nielsonferreira/controller/BookController.java,d\b\dba1399d147d406a7f71927c7e38db1048d0ff26
-r
-Bsrc/main/java/br/com/nielsonferreira/config/FileStorageConfig.java,e\6\e62fc53e723dc9412be55b925a7628115bd61435
 a
 1src/main/java/br/com/nielsonferreira/Startup.java,8\7\874bdecccfba5128d4d7c2c071f673ab8591cb7f
-x
-Hsrc/main/java/br/com/nielsonferreira/exception/FileStorageException.java,2\f\2fa1855bd1a32c7230db0e71eb984bb3e1cddcc8
-{
-Ksrc/main/java/br/com/nielsonferreira/exception/MyFileNotFoundException.java,a\6\a63e17c6a29370b58cc7b512d98ba6ae901d3a6b
 }
 Msrc/main/java/br/com/nielsonferreira/exception/ResourceNotFoundException.java,3\6\36e3ea6bec815185bf41297cd11414fd191c0cfa
 u
