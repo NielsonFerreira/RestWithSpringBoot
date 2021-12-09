@@ -15,6 +15,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
@@ -54,9 +56,9 @@ public class PersonController {
     @ApiOperation(value = "Find all people")
     @GetMapping(value = "/findPersonByName/{firstName}", produces = {"application/json", "application/xml", "application/x-yaml"})
     public ResponseEntity<?> findPersonByName(@PathVariable("firstName") String firstName,
-                                                                     @RequestParam(value = "page", defaultValue = "0") int page,
-                                                                     @RequestParam(value = "limit", defaultValue = "12") int limit,
-                                                                     @RequestParam(value = "direction", defaultValue = "asc") String direction){
+                                              @RequestParam(value = "page", defaultValue = "0") int page,
+                                              @RequestParam(value = "limit", defaultValue = "12") int limit,
+                                              @RequestParam(value = "direction", defaultValue = "asc") String direction){
 
         var sortDirection = "desc".equalsIgnoreCase(direction) ? Sort.Direction.DESC : Sort.Direction.ASC;
 
@@ -88,6 +90,14 @@ public class PersonController {
         PersonVO personVO = services.create(person);
         personVO.add(linkTo(methodOn(PersonController.class).findById(personVO.getKey())).withSelfRel());
         return personVO;
+    }
+
+    @PostMapping("/personList")
+    public List<PersonVO> createList(@RequestBody List<PersonVO> person){
+        List<PersonVO> personVOList = services.createList(person);
+        personVOList.stream().forEach(personVO -> personVO.add(linkTo(methodOn(PersonController.class)
+                .findById(personVO.getKey())).withSelfRel()));
+        return personVOList;
     }
 
     @ApiOperation(value = "Update a specific person")

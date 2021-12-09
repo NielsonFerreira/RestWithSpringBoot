@@ -11,6 +11,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class PersonServices {
@@ -22,6 +24,18 @@ public class PersonServices {
         var entity = DozerConverter.parseObject(person, Person.class);
         var vo = DozerConverter.parseObject(repository.save(entity), PersonVO.class);
         return vo;
+    }
+
+    public List<PersonVO> createList(List<PersonVO> person){
+        PersonVO vo = null;
+        List<PersonVO> personVOList = new ArrayList<>();
+
+        for (PersonVO personVO:person){
+            var entity = DozerConverter.parseObject(personVO, Person.class);
+            vo = DozerConverter.parseObject(repository.save(entity), PersonVO.class);
+            personVOList.add(vo);
+        }
+        return personVOList;
     }
 
     public Page<PersonVO> findPersonByName(String firstName, Pageable pageable){
