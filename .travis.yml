@@ -11,7 +11,7 @@ deploy:
   provider: script
   script:
     docker push nielsonferreira/rest-with-spring-boot;
-    docker push nielsonferreira/mysql-rest-with-spring-boot
+    docker push nielsonferreira/mysql-rest-with-spring-boot;
   on:
     branch: master
 notifications:
