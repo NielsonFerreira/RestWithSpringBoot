@@ -97,6 +97,12 @@
             <artifactId>flyway-core</artifactId>
         </dependency>
 
+        <!-- For Hibernate Envers support -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-envers</artifactId>
+        </dependency>
+
         <!-- For Unit Tests support -->
         <dependency>
             <groupId>junit</groupId>

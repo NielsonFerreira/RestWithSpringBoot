@@ -1,11 +1,14 @@
 package br.com.nielsonferreira.data.model;
 
+import org.hibernate.envers.Audited;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "person")
+@Audited
 public class Person implements Serializable {
 
     @Id
